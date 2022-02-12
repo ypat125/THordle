@@ -22,7 +22,7 @@ function WordleRow(props) {
   return (
     <div className="wordleRow">
       {[...Array(5)].map((x, i) =>
-        <WordleCell id={i+1} guess={props.guess[i]} row={props.row_id} curRow={props.curRow} checkRowWord={checkWordCoalesce} />
+        <WordleCell key={i} id={i+1} guess={props.guess[i]} row={props.row_id} curRow={props.curRow} checkRowWord={checkWordCoalesce} />
       )}
     </div>
   );

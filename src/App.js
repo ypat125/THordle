@@ -6,8 +6,14 @@ import { Shake } from 'reshake'
 import './App.css';
 
 import WordleRow from './components/wordleRow';
+import SuccessModal from './components/successModal';
+import FailureModal from './components/failureModal';
 
 function App() {
+  // Modals
+  const [successModalOpen, setSuccessModalOpen] = useState(false);
+  const [failureModalOpen, setFailureModalOpen] = useState(false);
+
   const [shakeBoard, setShakeBoard] = useState(false);
   const [wordleWord, setWordleWord] = useState("");
   const [curRow, setCurRow] = useState(1);
@@ -24,14 +30,17 @@ function App() {
 
     // lets make our guess
     let guess = []
+    let completelyCorrect = true;
 
     for (let i = 0; i < 5; i++) {
       if (wordleWord[i] == word[i]) {
         guess.push('g');
       } else if (wordleWord.includes(word[i])) {
-        guess.push('y')
+        guess.push('y');
+        completelyCorrect = false;
       } else {
         guess.push('l');
+        completelyCorrect = false;
       }
     }
 
@@ -41,6 +50,14 @@ function App() {
       return newGuesses;
     })
     setCurRow(curRow + 1); 
+
+    if (completelyCorrect) {
+      setSuccessModalOpen(true);
+    }
+
+    if (curRow == 6) {
+      setFailureModalOpen(true);
+    }
   }
 
   useEffect(() => {
@@ -65,7 +82,7 @@ function App() {
       <Shake h={10} v={0} r={0} dur={300} int={10} active={shakeBoard} fixed={true}>
         <div className='wordleBoardContainer'>
           {[...Array(6)].map((x, i) =>
-            <WordleRow guess={guesses[i]} row_id={i+1} curRow={curRow} checkWord={checkWord} />
+            <WordleRow key={i} guess={guesses[i]} row_id={i+1} curRow={curRow} checkWord={checkWord} />
           )}
         </div>
       </Shake>
@@ -73,6 +90,8 @@ function App() {
       <Typography variant="h8">
         Created with ❤️ at TreeHacks 2022
       </Typography>
+      <SuccessModal closeModal={() => setSuccessModalOpen(false)} isModalOpen={successModalOpen} />
+      <FailureModal closeModal={() => setFailureModalOpen(false)} isModalOpen={failureModalOpen} />
     </div>
   );
 }
