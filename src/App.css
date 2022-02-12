@@ -1,38 +1,158 @@
-.App {
+@font-face {
+  font-family: 'Gordita Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Regular'), url('./assets/Gordita Regular.woff') format('woff');
+}
+  
+  
+@font-face {
+  font-family: 'Gordita Regular Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Regular Italic'), url('./assets/Gordita Regular Italic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Gordita Thin';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Thin'), url('./assets/Gordita Thin.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Gordita Thin Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Thin Italic'), url('./assets/Gordita Thin Italic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Gordita Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Light'), url('./assets/Gordita Light.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Gordita Light Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Light Italic'), url('./assets/Gordita Light Italic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Gordita Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Medium'), url('./assets/Gordita Medium.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Gordita Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Medium Italic'), url('./assets/Gordita Medium Italic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Gordita Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Bold'), url('./assets/Gordita Bold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Gordita Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Bold Italic'), url('./assets/Gordita Bold Italic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Gordita Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Black'), url('./assets/Gordita Black.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Gordita Black Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Black Italic'), url('./assets/Gordita Black Italic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Gordita Ultra';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Ultra'), url('./assets/Gordita Ultra.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Gordita Ultra Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Ultra Italic'), url('./assets/Gordita Ultra Italic.woff') format('woff');
+}
+
+h1 {
+  font-family: 'Gordita Bold'!important;
+}
+
+h2 {
+  font-family: 'Gordita Bold'!important;
+}
+
+h3 {
+font-family: 'Gordita Bold'!important;
+}
+
+h4 {
+  font-family: 'Gordita Bold'!important;
+}
+
+h5 {
+font-family: 'Gordita Bold'!important;
+}
+
+h6 {
+  font-family: 'Gordita Bold'!important;
+}
+
+p {
+  font-family: 'Gordita Medium'!important;
+}
+
+.app-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  flex-direction: column;
+}
+
+.wordleBoardContainer {
+  width: 80vw;
+  max-width: 500px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 10px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

@@ -1,0 +1,33 @@
+.wordleCell {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.wordleCellInput {
+    width: 100%;
+    text-align: center;
+    border: none!important;
+    background-color: rgba(211, 211, 211, 0.4);
+    border-radius: 5px;
+    height: 80px;
+    font-size: 2em;
+}
+
+.green {
+    background-color: #55e4ac!important;
+    color: white;
+}
+
+.gray {
+    background-color: gray!important;
+    color: white;
+}
+
+.yellow {
+    background-color: #ffc208!important;
+    color: white;
+}
