@@ -53,10 +53,12 @@ function App() {
 
     if (completelyCorrect) {
       setSuccessModalOpen(true);
+      return;
     }
 
     if (curRow == 6) {
       setFailureModalOpen(true);
+      return;
     }
   }
 
