@@ -3,7 +3,7 @@
     flex: 1;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -13,9 +13,31 @@
     border: none!important;
     background-color: rgba(211, 211, 211, 0.4);
     border-radius: 5px;
-    height: 80px;
+    height: 85px;
     font-size: 2em;
 }
+
+@media only screen and (max-width: 767px) {
+    .wordleCell {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        text-align: center;
+    }
+    
+    .wordleCellInput {
+        width: 100%;
+        text-align: center;
+        border: none!important;
+        background-color: rgba(211, 211, 211, 0.4);
+        border-radius: 5px;
+        height: 55px;
+        font-size: 1.5em;
+    }
+}
+  
 
 .green {
     background-color: #55e4ac!important;

@@ -144,6 +144,9 @@ p {
   padding-top: 50px;
   padding-bottom: 50px;
   flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
 }
 
 .wordleBoardContainer {
@@ -151,7 +154,7 @@ p {
   max-width: 500px;
   border: 1px solid lightgray;
   border-radius: 10px;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   display: flex;
   flex-direction: column;

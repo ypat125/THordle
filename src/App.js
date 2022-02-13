@@ -9,6 +9,20 @@ import WordleRow from './components/wordleRow';
 import SuccessModal from './components/successModal';
 import FailureModal from './components/failureModal';
 
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyD6mX2UcUYKghKoilC3epLEy1G0uFYh7S0",
+  authDomain: "thordle.firebaseapp.com",
+  projectId: "thordle",
+  storageBucket: "thordle.appspot.com",
+  messagingSenderId: "1057414189884",
+  appId: "1:1057414189884:web:0dbe6420c55e8f57c58439",
+  measurementId: "G-QN3MXB9DYW"
+};
+
+const app = initializeApp(firebaseConfig);
+
 function App() {
   // Modals
   const [successModalOpen, setSuccessModalOpen] = useState(false);
